@@ -6,8 +6,7 @@ CONTACT_EMAIL=$EMAIL
 KEY_ALGO=${ALGORITHM:-secp384r1}
 CHALLENGETYPE=dns-01
 HOOK=/srv/dehydrated/dehydrated.default.sh
-PROVIDER=namecheap
-PROVIDER_UPDATE_DELAY=300
+
 
 if [ -z ${STAGING+-} ]; then
   CA="https://acme-v02.api.letsencrypt.org/directory"

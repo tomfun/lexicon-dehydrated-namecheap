@@ -46,9 +46,9 @@ www.tomfun.co demo.tomfun.co
 ### First time
 Create account and accept terms
 ```bash
-./run.sh /dehydrated --register --accept-terms
+./run.sh /srv/dehydrated/dehydrated --register --accept-terms
 # Or
-# ./test-run.sh /dehydrated --register --accept-terms
+# ./test-run.sh /srv/dehydrated/dehydrated --register --accept-terms
 ```
 
 ### See configs
