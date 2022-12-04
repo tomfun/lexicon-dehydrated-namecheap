@@ -12,5 +12,3 @@ RUN apt update \
     && apt install -y bsdmainutils \
     && apt-get clean \
     && pip install dns-lexicon[namecheap]
-
-CMD bash /srv/dehydrated/dehydrated --cron
