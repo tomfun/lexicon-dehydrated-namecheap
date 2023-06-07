@@ -14,7 +14,7 @@ ENV PROVIDER=namecheap
 
 ENV PROVIDER_UPDATE_DELAY=300
 
-ADD https://raw.githubusercontent.com/Rycieos/dehydrated-lexicon/main/dehydrated.hook.sh /srv/dehydrated/dehydrated.hook.sh
+ADD https://raw.githubusercontent.com/Rycieos/dehydrated-lexicon/main/dehydrated.hook.sh /srv/dehydrated/dehydrated.default.sh
 
 ENTRYPOINT ["srv/dehydrated/dehydrated"]
 CMD ["--cron", "--accept-terms", "--hook", "/srv/dehydrated/dehydrated.hook.sh", "--challenge", "dns-01"]
