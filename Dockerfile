@@ -15,9 +15,9 @@ ENV PROVIDER=namecheap
 ENV PROVIDER_UPDATE_DELAY=300
 
 # Thanks to Rycieos for the dockerfile
-ADD https://raw.githubusercontent.com/Rycieos/dehydrated-lexicon/main/dehydrated.hook.sh /srv/dehydrated/dehydrated.default.sh
+COPY --chmod=755 ./dehydrated.default.sh /srv/dehydrated/
 
 COPY config /srv/dehydrated/
 
 ENTRYPOINT ["srv/dehydrated/dehydrated"]
-CMD ["--cron", "--accept-terms", "--hook", "/srv/dehydrated/dehydrated.hook.sh", "--challenge", "dns-01"]
+CMD ["--cron", "--accept-terms", "--hook", "/srv/dehydrated/dehydrated.default.sh", "--challenge", "dns-01"]

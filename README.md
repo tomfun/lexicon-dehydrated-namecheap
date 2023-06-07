@@ -2,9 +2,8 @@
 
 Based on:
  - https://github.com/AnalogJ/lexicon
- - https://hub.docker.com/r/analogj/lexicon/
  - https://github.com/lukas2511/dehydrated
- - https://dehydrated.io/
+ - https://github.com/Rycieos/dehydrated-lexicon
 
 ## Why
 
@@ -19,7 +18,7 @@ But technically you can use any provider. Just set env variables `PROVIDER` and 
 
 ## Requirements
  - docker
- - namecheap API token & username
+ - namecheap API token & username or other providers credentials
 
 ## Usage
 
@@ -34,7 +33,7 @@ docker run --rm -it \
 	-e LEXICON_NAMECHEAP_USERNAME=example \
     -e LEXICON_NAMECHEAP_TOKEN=201927quien5Afei2vaem8choh0ooFah \
 	tomfun/lexicon-dehydrated-namecheap:latest \
-	$@
+	--help
 ```
 
 And `domains.txt` with domains:
@@ -63,3 +62,9 @@ Create account and accept terms
 
 `STAGING=true` means enable staging endpoint for CERTIFICATES, but not for namecheap
 Create bash file for easy use like *run.sh* but with `-e STAGING=true \` in *test-run.sh* and use it
+
+### Local build
+
+```shell
+docker build https://github.com/tomfun/lexicon-dehydrated-namecheap.git  -t tomfun/lexicon-dehydrated-namecheap:local
+```
